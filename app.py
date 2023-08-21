@@ -1,6 +1,8 @@
-import streamlit as st
+# app.py
+from flask import Flask
 
-output = "Hello, World!"  # Example output
+app = Flask(__name__)
 
-st.title('Python Code Output')
-st.write(output)
+@app.route('/')
+def index():
+    return "Hello, World!"
